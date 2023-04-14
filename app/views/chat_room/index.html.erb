@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+               <h5 class="card-title">chat app</h5>
+               <p class="card-text"><%= render "messages/form" %></p>
+            </div>
+        </div>
+    </div>
+   <div class="col-lg-6">
+        <div id="chat-room">
+           <%= render @messages %>
+        </div>
+   </div>
+</div>
