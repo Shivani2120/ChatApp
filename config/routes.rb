@@ -5,13 +5,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :messages
   resources :chat_room
   # get 'messages/chat_room'
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'
   delete '/signout', to: 'sessions#destroy'
-  resources :rooms
+  resources :rooms do
+    resources :messages
+  end
   resources :users
   root 'rooms#index'
 end
