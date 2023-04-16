@@ -9,7 +9,7 @@ development:
   host: localhost
   pool: 5
   username: postgres
-  password: 12345678
+  password: postgres
 
 test:
   <<: *default
@@ -17,4 +17,4 @@ test:
   host: localhost
   pool: 5
   username: postgres
-  password: 12345678
+  password: postgres
