@@ -5,6 +5,7 @@
             <%= turbo_stream_from "users" %>
             <div id="users">
                 <%#= render @users %>
+                <h4 class="text-center text-light"> <%= @user&.username || @single_room.name %> </h4>
             </div>
         </div>
         <div class="user-room" style="width: 16rem;">
