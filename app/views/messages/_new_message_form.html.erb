@@ -1,7 +1,12 @@
+<div class="form-group msg-form">
+  <%= form_with(model: [@single_room ,@message], remote: true, class: "d-flex", data: { controller: "reset-form emoji-picker", action: "turbo:submit-end->reset-form#reset" } ) do |f| %>
+    <%= content_tag(:div, "", class:"pickerContainer", data: {emoji_picker_target: "pickerContainer"})%>
+   
+    <span class="emoji-picker-container"></span>
+    <%= f.text_field :content, id: 'chat-text', class: "form-control msg-content", autocomplete: 'off', placeholder: "Send a message...", data: {
+      emoji_picker_target: "input"} %>
 
-  <div class="form-group msg-form">
-    <%= form_with(model: [@single_room ,@message], remote: true, class: "d-flex" ) do |f| %>
-      <%= f.text_field :content, id: 'chat-text', class: "form-control msg-content", autocomplete: 'off', placeholder: "Send a message..." %>
-      <%= f.submit "send", data: { disable_with: false }, class: "btn btn-primary" %>
-    <% end %>
-  </div>
+    <%= f.submit "send", data: { disable_with: false }, class: "btn btn-primary" %>
+ 
+  <% end %>
+</div>

@@ -5,6 +5,4 @@ import "jquery"
 import "jquery_ujs"
 import "popper"
 import "bootstrap"
-import "channels"
 import "@hotwired/turbo-rails"
-
