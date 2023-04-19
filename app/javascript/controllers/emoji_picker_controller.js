@@ -41,7 +41,7 @@ export default class extends Controller {
   }
 
   emojiButtonString() {
-    const buttonString = `<button class="trix-button" id="emoji-picker" data-trix-action="popupPicker" tabindex="1">😀</button>`;
+    const buttonString = `<button type="button" class="emoji-button" id="emoji-picker" data-text-action="popupPicker" tabindex="1">😀</button>`;
     return buttonString;
   }
 }
