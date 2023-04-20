@@ -14,6 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_121547) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "messages", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "room_id", null: false
@@ -24,6 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_121547) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+=======
+>>>>>>> 26ce4dc4617385b287e132fd63671a66b159e862
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.boolean "is_private", default: false
