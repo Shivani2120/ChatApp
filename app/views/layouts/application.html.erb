@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
     <style>
       <%= ".msg-#{current_user&.id}" %> {
-        background-color: #007bff !important;
+        background-color: #c63662 !important;
         padding: 10px;
       }
       <%= ".cont-#{current_user&.id}" %> {
@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div class="container p-4">
+    <div class="container p-4" >
       <%= render "shared/navbar" %>
       <%= yield %>
     </div>

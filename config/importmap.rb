@@ -16,3 +16,4 @@ pin "stimulus-autocomplete", to: "https://ga.jspm.io/npm:stimulus-autocomplete@3
 pin "picmo", to: "https://ga.jspm.io/npm:picmo@5.8.2/dist/index.js"
 pin "@picmo/popup-picker", to: "https://ga.jspm.io/npm:@picmo/popup-picker@5.8.2/dist/index.js"
 pin "@fortawesome/fontawesome-free", to: "https://ga.jspm.io/npm:@fortawesome/fontawesome-free@6.4.0/js/all.js"
+pin "@rails/activestorage", to: "https://ga.jspm.io/npm:@rails/activestorage@7.0.4-3/app/assets/javascripts/activestorage.esm.js"
