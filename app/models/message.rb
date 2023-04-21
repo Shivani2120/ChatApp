@@ -4,7 +4,7 @@ class Message < ApplicationRecord
   after_create_commit { broadcast_append_to self.room }
   before_create :confirm_participant
   has_many_attached :attachments, dependent: :destroy
-  validate :validate_attachment_filetypes
+  # validate :validate_attachment_filetypes
 
   def confirm_participant
     if self.room.is_private
@@ -24,14 +24,14 @@ class Message < ApplicationRecord
     end
   end
   
-  private
-  def validate_attachment_filetypes
-    return unless attachments.attached?
+  # private
+  # def validate_attachment_filetypes
+  #   return unless attachments.attached?
     
-    attachments.each do |attachment|
-      unless attachment.content_type.in?(%w[image/jpeg image/png image/gif video/mp4 audio/mp3])
-        errors.add(:attachments, 'must be a JPEG, PNG, GIF, MP3 or MP4')
-      end
-    end
-  end
+  #   attachments.each do |attachment|
+  #     unless attachment.content_type.in?(%w[image/jpeg image/png image/gif video/mp4 audio/mp3])
+  #       errors.add(:attachments, 'must be a JPEG, PNG, GIF, MP3 or MP4')
+  #     end
+  #   end
+  # end
 end
