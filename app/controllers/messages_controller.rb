@@ -1,20 +1,12 @@
 class MessagesController < ApplicationController
-    
-    def create
-        message = Message.create(params[:message].permit!)
-        ActionCable.server.broadcast "chat", { 
-          message: MessagesController.render(
-            partial: 'message', 
-            locals: { message: message }
-          ).squish 
-        }
-    #   @message = Message.new(content: params[:message][:content])
-    #    if @message.save 
-    #     ActionCable.server.broadcast('chat_room_channel', @message)
-    #     redirect_to chat_room_index_path
-    #    else
-    #     render :new
-    #    end
-    end
+  def create
+    @current_user = current_user
+    @message = @current_user.messages.create(content: msg_params[:content], room_id: params[:room_id])
+  end
 
+  private
+
+  def msg_params
+    params.require(:message).permit(:content)
+  end
 end
