@@ -74,4 +74,3 @@ end
 gem "rack-cors"
 gem "jquery-rails"
 gem "bootstrap"
-gem 'actioncable'

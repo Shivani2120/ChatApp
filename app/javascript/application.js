@@ -5,6 +5,5 @@ import "jquery"
 import "jquery_ujs"
 import "popper"
 import "bootstrap"
-import "channels"
-import "@hotwired/turbo-rails"
-
+import "@fortawesome/fontawesome-free"
+import "@popperjs/core"

@@ -15,3 +15,38 @@
  */
  @import "bootstrap";
  @import "rooms";
+
+ .emoji-button{
+    all: unset;
+    cursor: pointer;
+    margin: 7px 0px 0px -37px;
+ }
+  
+ .fa-paper-plane{
+   margin: 8px 0px 4px 9px;
+ }
+ 
+ .submit_button{
+   all: unset;
+   cursor: pointer;
+   border: 1px solid black;
+   border-radius: 50%;
+   width: 36px;
+   background-color: black;
+ }
+
+ .signout{
+   all: unset;
+   cursor: pointer;
+ }
+
+ .bglogout{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 29px;
+    background-color: white;
+ }
+
+ .fa-right-from-bracket{
+    width: 16px;
+ }
