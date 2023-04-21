@@ -155,6 +155,7 @@ export default class extends Controller {
   }
 
   audio() {
+    debugger
     let record = document.getElementById("audio-record-button");
     let messageAttachments = document.getElementById("message_attachments");
 
