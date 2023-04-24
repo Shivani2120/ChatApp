@@ -7,7 +7,7 @@ class UsersController < ApplicationController
        @room = Room.new
        @message = Message.new
        @room_name = get_name(@user, @current_user)
-       @single_room = Room.where(name: @room_name) || Room.create_private_room
+       @single_room = Room.where(name: @room_name) || Room.create_private_room([@user, current_user], @room_name)
        @messages = @single_room.messages    
        
        render "rooms/index"
