@@ -42,8 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_124852) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-<<<<<<< HEAD
-=======
   create_table "messages", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "room_id", null: false
@@ -63,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_124852) do
     t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
->>>>>>> turbo
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.boolean "is_private", default: false
